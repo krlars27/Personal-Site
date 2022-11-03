@@ -1,5 +1,5 @@
 import React from 'react'
-const Portfolio = (props) => {
+const Portfolio = () => {
     return <div className="app">
       
     </div>

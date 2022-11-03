@@ -1,10 +1,28 @@
-import React from 'react'
-
+import React from "react";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import { Navbar, About, Portfolio } from "./";
 
 const App = () => {
-    return <div id="app">
-      <h1>Kevin Larson</h1>
-    </div>
-  }
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Navbar />}>
+      <Route path="about" element={<About />} />
+      <Route path="portfolio" element={<Portfolio />} />
+      <Route path="app" element={<App />} />
+    </Route>
+  )
+);
 
-  export default App;
+  return (
+    <div id="app">
+      <RouterProvider router={router}></RouterProvider>
+    </div>
+  );
+};
+
+export default App;
