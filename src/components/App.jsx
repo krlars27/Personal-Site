@@ -5,7 +5,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import { Navbar, About, Portfolio } from "./";
+import { Navbar, About, Portfolio, Home } from "./";
 
 const App = () => {
 const router = createBrowserRouter(
@@ -13,7 +13,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Navbar />}>
       <Route path="about" element={<About />} />
       <Route path="portfolio" element={<Portfolio />} />
-      <Route path="app" element={<App />} />
+      <Route path="Home" element={<Home />} />
     </Route>
   )
 );
